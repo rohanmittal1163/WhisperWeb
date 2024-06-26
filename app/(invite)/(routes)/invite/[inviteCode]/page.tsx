@@ -9,7 +9,7 @@ export default async function InviteCodePage({
 }) {
 	const profile = await currentProfile();
 	if (!profile) {
-		return redirect(`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`);
+		return redirect(`${process.env.NEXT_PUBLIC_SITE_URL}/sign-in`);
 	}
 
 	if (!params.inviteCode) return redirect('/');
