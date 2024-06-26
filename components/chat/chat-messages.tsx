@@ -49,13 +49,19 @@ export const ChatMessages = ({
 	const chatRef = useRef<ElementRef<'div'>>(null);
 	const bottomRef = useRef<ElementRef<'div'>>(null);
 
-	const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
-		useChatQuery({
-			queryKey,
-			apiUrl,
-			paramKey,
-			paramValue,
-		});
+	const {
+		data,
+		fetchNextPage,
+		hasNextPage,
+		isFetchingNextPage,
+		status,
+		isPending,
+	} = useChatQuery({
+		queryKey,
+		apiUrl,
+		paramKey,
+		paramValue,
+	});
 	useChatSocket({ queryKey, addKey, updateKey });
 	useChatScroll({
 		chatRef,
@@ -65,7 +71,7 @@ export const ChatMessages = ({
 		count: data?.pages?.[0]?.items?.length ?? 0,
 	});
 
-	if (status === 'pending') {
+	if (isPending) {
 		return (
 			<div className="flex flex-col flex-1 justify-center items-center">
 				<Loader2 className="h-7 w-7 text-zinc-500 animate-spin my-4" />
