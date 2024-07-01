@@ -84,7 +84,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
  ## 🔰 Installation
 Download or clone this repository.
 
-``` git clone https://github.com/rohanmittal1163/WhisperWeb ```
+```bash git clone https://github.com/rohanmittal1163/WhisperWeb ```
 
 ## ❤ Contribute
 This project is open source and we are happy to receive contributions. If you would like to contribute, please follow these steps:
