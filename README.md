@@ -79,6 +79,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - ShadCNUI
 - livekit
 - uploadthing
+- Socket.io
 
  ## 🔰 Installation
 Download or clone this repository.
